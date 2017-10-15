@@ -1,7 +1,7 @@
 # Math-Problems
 Project 1 for UMSL CS 4610
 
-# Tech Stack:
+### Tech Stack:
 DB: MySQL
 <br>
 Backend: PHP
