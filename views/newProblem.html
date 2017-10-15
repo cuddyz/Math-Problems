@@ -1,0 +1,13 @@
+<div class="new-problem">
+    <i uib-tooltip="Close" tooltip-placement="top" class="fa fa-times" ng-click="$close()" aria-hidden="true"></i>
+    <form name="problemForm" ng-submit="insertProblem(problemForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : problemForm.problemInput.$invalid && submitted }">
+            <label>New Problem:</label>
+            <textarea ng-model="newContent" class="form-control" rows="5" name="problemInput" required></textarea>
+            <p ng-if="problemForm.problemInput.$invalid && submitted" class="help-block">Please insert a math problem.</p>
+        </div>
+        <div class="btn-group pull-right">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,1 @@
+var mathApp = angular.module("mathApp", ['ngSanitize', 'ngAnimate', 'ui.bootstrap']);

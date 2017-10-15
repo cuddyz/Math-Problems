@@ -1,0 +1,86 @@
+.footer li {
+    cursor: pointer;
+}
+
+.pages {
+    display: flex;
+}
+
+.pagination {
+    margin: 1rem auto;
+}
+
+.problems {
+    margin-top: 8rem;
+}
+
+.panel-heading {
+    position: relative;
+}
+
+.fa-arrow-up,
+.fa-arrow-down,
+.fa-pencil,
+.fa-trash {
+    position: absolute;
+    top: 1rem;
+}
+
+.fa-arrow-up:hover,
+.fa-arrow-down:hover,
+.fa-pencil:hover {
+    color: #E6E6E6;
+    cursor: pointer
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: #d9534f;
+}
+
+.fa-trash {
+    right: 1rem;
+}
+
+.fa-pencil {
+    right: 3rem;
+}
+
+.fa-arrow-down {
+    right: 5rem;
+}
+
+.fa-arrow-up {
+    right: 7rem;
+}
+
+.right {
+    position: absolute;
+    right: 1rem;
+    top: 1.7rem;
+    font-size: 1.7rem;
+    color: #337ab7;
+}
+
+.fa-plus:hover,
+.fa-times:hover,
+.fa-undo:hover {
+    cursor: pointer;
+    color: #1A619E;
+}
+
+.fa-undo {
+    margin-right: 1rem;
+}
+
+.fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #337ab7;
+}
+
+.new-problem {
+    margin: 5rem 5rem 8rem 5rem;
+}
