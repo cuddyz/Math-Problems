@@ -1,9 +1,11 @@
 # Math-Problems
 Project 1 for UMSL CS 4610
 
-Tech Stack:
+# Tech Stack:
 DB: MySQL
+<br>
 Backend: PHP
+<br>
 Frontend: AngularJS
 
 Was required by the class to write a PHP web app.  My goal was to write as little PHP as possible and let Angular do all the client work.
