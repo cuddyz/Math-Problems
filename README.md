@@ -26,5 +26,6 @@ To run you must do three things:
     <li>Ex. You can find it at `localhost/phpmyadmin`</li>
   </ul>
 </ol>
+
 After all that is done, just navigate to `localhost/Math-Problems/index.php` and you should be good to go.
 If not, then one of the above steps didn't pan out.
