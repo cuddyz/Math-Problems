@@ -15,14 +15,16 @@ PHP makes the calls to the SQL server, everything else handled by Angular via RE
 This is built using XAMPP.
 
 To run you must do three things:
-
-1. Open XAMPP Manager and turn on the Apache Web Server and MySql connection
-2. Download this project and place it in your XAMPP htdocs directory (so localhost can find it).
-<br />
-  Ex. My directory: `~/Application/XAMPP/xamppfiles/htdocs/Math-Problems`
-3. Install the mysql file located in the `db` folder of this project, onto your MySQL Server running from XAMPP.
-<br />
-  Ex. You can find it at `localhost/phpmyadmin`
-  
+<ol>
+  <li>Open XAMPP Manager and turn on the Apache Web Server and MySql connection.</li>
+  <li>Download this project and place it in your XAMPP htdocs directory (so localhost can find it).</li>
+  <ul>
+    <li>Ex. My directory: `~/Application/XAMPP/xamppfiles/htdocs/Math-Problems`</li>
+  </ul>
+  <li>Install the mysql file located in the `db` folder of this project, onto your MySQL Server running from XAMPP.</li>
+  <ul>
+    <li>Ex. You can find it at `localhost/phpmyadmin`</li>
+  </ul>
+</ol>
 After all that is done, just navigate to `localhost/Math-Problems/index.php` and you should be good to go.
 If not, then one of the above steps didn't pan out.
