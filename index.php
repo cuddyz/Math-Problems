@@ -51,6 +51,9 @@
                     <div class="panel-body">
                         <p ng-bind-html="problem.content"></p>
                     </div>
+                    <div class="panel-footer">
+                        <p class="keywords">Keywords: <span>Algebra, Calculus, Trig</span></p>
+                    </div>
                 </div>
             </div>
         </div>
