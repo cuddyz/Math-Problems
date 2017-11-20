@@ -139,11 +139,29 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
         }
     };
 
-    //Add keyword
+    //Remove keyword
     $scope.removeKeyword = function(problem, index) {
         problem.splitKeywords.splice(index, 1);
         problem.keywords = problem.splitKeywords.join(',');
         //Insert PHP call to remove from DB
+    };
+
+    //Flip keyword flag
+    $scope.addKeyword = function(problem) {
+        if (!problem.addingKeyword) {
+            problem.addingKeyword = true;
+        } else {
+            problem.addingKeyword = false;
+        }
+    };
+
+    //Submit keyword
+    $scope.submitKeyword = function(problem, keyword) {
+        problem.splitKeywords.push(keyword);
+        problem.keywords = problem.splitKeywords.join(',');
+        //Insert PHP call to submit to DB
+        problem.addingKeyword = false;
+
     };
 
     //Filter our searches

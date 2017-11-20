@@ -167,9 +167,14 @@
 }
 
 .add-keyword {
-    margin: 1.3rem;
+    margin: 1.3rem 1.6rem;
 }
 
 .add-keyword i:hover {
     color: #2ecc71;
+}
+
+.adding-keyword {
+    margin-top: .2rem;
+    width: 25%;
 }

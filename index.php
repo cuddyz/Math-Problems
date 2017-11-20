@@ -66,7 +66,15 @@
                             <li><a href="">{{ keyword }}</a><i ng-click="removeKeyword(problem, $index)" uib-tooltip="Remove keyword" tooltip-placement="top" class="fa fa-times remove-keyword" aria-hidden="true"></i></li>
                         </ul>
                         <ul class="nav nav-pills">
-                            <li><p class="add-keyword"><i ng-click="addKeyword(problem)" uib-tooltip="Add keyword" tooltip-placement="top" class="fa fa-plus" aria-hidden="true"></i></p></li>
+                            <li ng-if="!problem.addingKeyword"><p class="add-keyword"><i ng-click="addKeyword(problem)" uib-tooltip="Add keyword" tooltip-placement="top" class="fa fa-plus" aria-hidden="true"></i></p></li>
+                            <li ng-if="problem.addingKeyword" class="adding-keyword">
+                                <div class="input-group">
+                                    <input ng-model="newKeyword" type="text" class="form-control" placeholder="Keyword" >
+                                    <span class="input-group-btn">
+                                        <button ng-click="submitKeyword(problem, newKeyword)" class="btn btn-default" type="button">Save</button>
+                                    </span>
+                                </div>
+                            </li>
                         </ul>
                         <i ng-click="editKeywords(problem)" uib-tooltip="Done editing" tooltip-placement="top" class="fa fa-check edit-keyword" aria-hidden="true"></i>
                     </div>
