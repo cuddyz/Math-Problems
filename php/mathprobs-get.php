@@ -24,6 +24,7 @@ while ($row = mysql_fetch_assoc($result)) {
     $prob->pid = $row['pid'];
     $prob->content = $row['content'];
     $prob->porder = $row['porder'];
+    $prob->keywords = $row['keywords'];
 
     $resArray[] = $prob;
 }

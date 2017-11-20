@@ -5,7 +5,6 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
 
     RestService.get("./php/mathprobs-get.php").then(function (response) {
         $scope.problems = response.data;
-        $scope.problems[0].keywords = "Algebra,Calculus,Trig";
         $scope.setPage(1);
     });
 
