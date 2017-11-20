@@ -14,6 +14,12 @@
     <body>
         <div ng-app="mathApp" ng-controller="MainController" class="main">
             <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="input-group left-search">
+                    <input type="text" class="form-control" placeholder="Search Keyword">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </span>
+                </div>
                 <div class="pages">
                     <ul ng-if="pager.pages.length" class="pagination">
                         <li ng-class="{disabled:pager.currentPage === 1}">

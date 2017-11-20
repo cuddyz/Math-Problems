@@ -94,3 +94,14 @@
 .keywords span {
     font-weight: normal;
 }
+
+.left-search {
+    position: absolute;
+    width: 20%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.left-search button {
+    padding: 0.9rem;
+}
