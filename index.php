@@ -17,7 +17,7 @@
                 <div class="input-group left-search">
                     <input ng-model="searchTerm" type="text" class="form-control" placeholder="Search Keyword">
                     <span class="input-group-btn">
-                        <button ng-click="search()" class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </span>
                 </div>
                 <div class="pages">

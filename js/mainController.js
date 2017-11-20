@@ -127,11 +127,6 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
         RestService.put("./php/mathprobs-put.php", JSON.stringify($scope.problems[index+1]));
     };
 
-    //Search the problems
-    $scope.search = function() {
-        alert($scope.searchTerm);
-    };
-
     //Filter our searches
     $scope.keywordFilter = function(problem) {
         var isMatch = false;
