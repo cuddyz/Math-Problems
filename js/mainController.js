@@ -34,7 +34,7 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
                 $scope.insertProblem = function(valid) {
                     $scope.submitted = true;
                     if (valid) {
-                        $rootScope.$broadcast('new-problem', {content: $scope.newContent, porder:porder + 1});
+                        $rootScope.$broadcast('new-problem', {content: $scope.newContent, porder:parseInt(porder) + 1});
                         $scope.$close();
                     }
                 }
