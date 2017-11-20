@@ -131,7 +131,11 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
         if (!problem.editingKeywords) {
             problem.editingKeywords = true;
             if (!problem.splitKeywords) {
-                problem.splitKeywords = problem.keywords.split(',');
+                if (problem.keywords && problem.keywords !== "") {
+                    problem.splitKeywords = problem.keywords.split(',');
+                } else {
+                    problem.splitKeywords = []
+                }
             }
         } else {
             problem.editingKeywords = false;
@@ -142,7 +146,7 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
     $scope.removeKeyword = function(problem, index) {
         problem.splitKeywords.splice(index, 1);
         problem.keywords = problem.splitKeywords.join(',');
-        //Insert PHP call to remove from DB
+        RestService.put("./php/mathprobs-put.php", JSON.stringify(problem));
     };
 
     //Flip keyword flag
