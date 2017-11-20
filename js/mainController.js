@@ -186,7 +186,8 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
     $scope.$on('new-problem', function (event, args) {
         var newProblem = {
             content: args.content,
-            porder: args.porder
+            porder: args.porder,
+            keywords: ""
         };
 
         RestService.post("./php/mathprobs-post.php", JSON.stringify(newProblem)).then(function(res) {
