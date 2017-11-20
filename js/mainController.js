@@ -160,11 +160,12 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
 
     //Submit keyword
     $scope.submitKeyword = function(problem, keyword) {
-        problem.splitKeywords.push(keyword);
-        problem.keywords = problem.splitKeywords.join(',');
-        RestService.put("./php/mathprobs-put.php", JSON.stringify(problem));
-        problem.addingKeyword = false;
-
+        if (keyword && keyword !== "") {
+            problem.splitKeywords.push(keyword);
+            problem.keywords = problem.splitKeywords.join(',');
+            RestService.put("./php/mathprobs-put.php", JSON.stringify(problem));
+            problem.addingKeyword = false;
+        }
     };
 
     //Filter our searches
@@ -172,7 +173,8 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
         var isMatch = false;
 
         if ($scope.searchTerm) {
-            var keywords = $scope.searchTerm.split(',');
+            var search = $scope.searchTerm.replace(/ /g,'');
+            var keywords = search.split(',');
 
             keywords.forEach(function(keyword) {
                 if (new RegExp(keyword).test(problem.keywords)) {
