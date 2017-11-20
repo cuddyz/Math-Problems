@@ -9,6 +9,7 @@ $req = json_decode($req);
 $req->pid = (int) $req->pid;
 $req->content = (string) $req->content;
 $req->porder = (int) $req->porder;
+$req->keywords = (string) $req->keywords;
 
 // Create connection
 $conn = new mysqli($dbhost, $dbuser, $dbpassword, $dbname);
@@ -18,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "UPDATE problem SET content = '$req->content', porder = $req->porder WHERE pid = $req->pid LIMIT 1";
+$sql = "UPDATE problem SET content = '$req->content', porder = $req->porder, keywords = '$req->keywords' WHERE pid = $req->pid LIMIT 1";
 $result = $conn->query($sql);
 
 if ($conn->query($sql) === TRUE) {

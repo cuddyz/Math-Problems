@@ -158,7 +158,7 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
     $scope.submitKeyword = function(problem, keyword) {
         problem.splitKeywords.push(keyword);
         problem.keywords = problem.splitKeywords.join(',');
-        //Insert PHP call to submit to DB
+        RestService.put("./php/mathprobs-put.php", JSON.stringify(problem));
         problem.addingKeyword = false;
 
     };
