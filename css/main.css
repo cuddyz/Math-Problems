@@ -21,14 +21,16 @@
 .fa-arrow-up,
 .fa-arrow-down,
 .fa-pencil,
-.fa-trash {
+.fa-trash,
+.fa-check {
     position: absolute;
     top: 1rem;
 }
 
 .fa-arrow-up:hover,
 .fa-arrow-down:hover,
-.fa-pencil:hover {
+.fa-pencil:hover,
+.fa-check:hover {
     color: #E6E6E6;
     cursor: pointer
 }
@@ -104,4 +106,70 @@
 
 .left-search button {
     padding: 0.9rem;
+}
+
+.panel-footer {
+    position: relative;
+}
+
+.panel-footer .edit-keyword {
+    right: 1rem;
+    color: #404040;
+}
+
+.panel-footer .edit-keyword:hover {
+    color: black;
+}
+
+.panel-footer .fa-check {
+    top: 2rem;
+}
+
+.panel-footer .fa-check:hover {
+    color: #2ecc71;
+}
+
+.editing-keywords {
+    display: flex;
+}
+
+.editing-keywords li {
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.editing-keywords li:hover,
+.editing-keywords li:focus,
+.editing-keywords li:active,
+.editing-keywords a:hover,
+.editing-keywords a:focus,
+.editing-keywords a:active {
+    background-color: #dcdcdc !important;
+    border-radius: 10px;
+}
+
+.editing-keywords a {
+    padding-right: 3rem !important;
+}
+
+.remove-keyword {
+    color: #404040;
+}
+
+.remove-keyword:hover {
+    color: #d9534f;
+}
+
+.editing-keywords a,
+.editing-keywords a:hover {
+    color: black;
+}
+
+.add-keyword {
+    margin: 1.3rem;
+}
+
+.add-keyword i:hover {
+    color: #2ecc71;
 }
