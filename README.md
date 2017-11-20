@@ -1,5 +1,5 @@
 # Math-Problems
-Project 1 for UMSL CS 4610
+Project 1 and 2 for UMSL CS 4610
 
 ### Tech Stack:
 DB: MySQL
