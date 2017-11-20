@@ -1,9 +1,11 @@
 mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageService', 'RestService', function($scope, $http, $uibModal, PageService, RestService) {
     $scope.pager = {};
     $scope.deletedProblems = [];
+    $scope.searchTerm = "";
 
     RestService.get("./php/mathprobs-get.php").then(function (response) {
         $scope.problems = response.data;
+        $scope.problems[0].keywords = "Algebra, Calculus, Trig";
         $scope.setPage(1);
     });
 
@@ -123,6 +125,30 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
 
         RestService.put("./php/mathprobs-put.php", JSON.stringify($scope.problems[index]));
         RestService.put("./php/mathprobs-put.php", JSON.stringify($scope.problems[index+1]));
+    };
+
+    //Search the problems
+    $scope.search = function() {
+        alert($scope.searchTerm);
+    };
+
+    //Filter our searches
+    $scope.keywordFilter = function(problem) {
+        var isMatch = false;
+
+        if ($scope.searchTerm) {
+            var keywords = $scope.searchTerm.split(',');
+
+            keywords.forEach(function(keyword) {
+                if (new RegExp(keyword).test(problem.keywords)) {
+                    isMatch = true;
+                }
+            });
+        } else {
+            isMatch = true;
+        }
+
+        return isMatch;
     };
 
 

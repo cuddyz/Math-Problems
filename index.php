@@ -15,9 +15,9 @@
         <div ng-app="mathApp" ng-controller="MainController" class="main">
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="input-group left-search">
-                    <input type="text" class="form-control" placeholder="Search Keyword">
+                    <input ng-model="searchTerm" type="text" class="form-control" placeholder="Search Keyword">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button ng-click="search()" class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </span>
                 </div>
                 <div class="pages">
@@ -46,7 +46,7 @@
             </nav>
 
             <div class="problems">
-                <div class="panel panel-primary" ng-repeat="problem in currentProblems">
+                <div class="panel panel-primary" ng-repeat="problem in currentProblems | filter:keywordFilter">
                     <div class="panel-heading">
                         <h3 class="panel-title">ID: {{ problem.pid }}</h3>
                         <i uib-tooltip="Move Up" tooltip-placement="top" class="fa fa-arrow-up" ng-click="moveUp(problem, $index)" aria-hidden="true"></i>
@@ -58,7 +58,7 @@
                         <p ng-bind-html="problem.content"></p>
                     </div>
                     <div class="panel-footer">
-                        <p class="keywords">Keywords: <span>Algebra, Calculus, Trig</span></p>
+                        <p class="keywords">Keywords: <span>{{ problem.keywords }}</span></p>
                     </div>
                 </div>
             </div>
