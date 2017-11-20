@@ -63,10 +63,10 @@
                     </div>
                     <div ng-if="problem.editingKeywords" class="panel-footer editing-keywords">
                         <ul class="nav nav-pills" ng-repeat="keyword in problem.splitKeywords">
-                            <li><a href="">{{ keyword }}</a><i uib-tooltip="Remove keyword" tooltip-placement="top" class="fa fa-times remove-keyword" aria-hidden="true"></i></li>
+                            <li><a href="">{{ keyword }}</a><i ng-click="removeKeyword(problem, $index)" uib-tooltip="Remove keyword" tooltip-placement="top" class="fa fa-times remove-keyword" aria-hidden="true"></i></li>
                         </ul>
                         <ul class="nav nav-pills">
-                            <li><p class="add-keyword"><i  uib-tooltip="Add keyword" tooltip-placement="top" class="fa fa-plus" aria-hidden="true"></i></p></li>
+                            <li><p class="add-keyword"><i ng-click="addKeyword(problem)" uib-tooltip="Add keyword" tooltip-placement="top" class="fa fa-plus" aria-hidden="true"></i></p></li>
                         </ul>
                         <i ng-click="editKeywords(problem)" uib-tooltip="Done editing" tooltip-placement="top" class="fa fa-check edit-keyword" aria-hidden="true"></i>
                     </div>

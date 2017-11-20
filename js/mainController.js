@@ -139,6 +139,13 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
         }
     };
 
+    //Add keyword
+    $scope.removeKeyword = function(problem, index) {
+        problem.splitKeywords.splice(index, 1);
+        problem.keywords = problem.splitKeywords.join(',');
+        //Insert PHP call to remove from DB
+    };
+
     //Filter our searches
     $scope.keywordFilter = function(problem) {
         var isMatch = false;
@@ -157,7 +164,6 @@ mathApp.controller('MainController', ['$scope', '$http', '$uibModal', 'PageServi
 
         return isMatch;
     };
-
 
     //When a new problem is inserted
     $scope.$on('new-problem', function (event, args) {
