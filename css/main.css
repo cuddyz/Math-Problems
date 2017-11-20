@@ -84,3 +84,13 @@
 .new-problem {
     margin: 5rem 5rem 8rem 5rem;
 }
+
+.keywords {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+.keywords span {
+    font-weight: normal;
+}
